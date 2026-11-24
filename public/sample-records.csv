@@ -1,16 +1,16 @@
-id,name,role,department,email,stage,source,applied_on,rating
-1001,Maya Patel,Frontend Engineer,Engineering,maya.patel@example.com,Interviewing,LinkedIn,2026-10-02,4
-1002,Liam O'Connor,Product Designer,Design,liam.oconnor@example.com,Screening,Referral,2026-10-03,3
-1003,Sofia Rossi,"Senior Engineer, Backend",Engineering,sofia.rossi@example.com,Offer,Referral,2026-09-18,5
-1004,Ethan Brooks,Account Executive,Sales,ethan.brooks@example.com,Applied,Job board,2026-10-07,2
-1005,Aisha Mohammed,Data Analyst,Analytics,aisha.mohammed@example.com,Interviewing,LinkedIn,2026-10-09,4
-1006,Noah Kim,Frontend Engineer,Engineering,noah.kim@example.com,Rejected,Career site,2026-09-25,2
-1007,Chloe Martin,Recruiter,People,chloe.martin@example.com,Hired,Referral,2026-08-30,5
-1008,Lucas Silva,"Marketing Manager, EMEA",Marketing,lucas.silva@example.com,Screening,Job board,2026-10-11,3
-1009,Hannah Lee,Product Designer,Design,hannah.lee@example.com,Interviewing,LinkedIn,2026-10-04,4
-1010,Omar Hassan,Senior Engineer,Engineering,omar.hassan@example.com,Applied,Career site,2026-10-14,
-1011,Grace Nguyen,Data Analyst,Analytics,grace.nguyen@example.com,Offer,LinkedIn,2026-09-12,4
-1012,Mateo Garcia,Account Executive,Sales,mateo.garcia@example.com,Hired,Job board,2026-08-21,4
-1013,Zoe Williams,"Customer Success Lead",Support,zoe.williams@example.com,Screening,Referral,2026-10-16,3
-1014,Ravi Sharma,Backend Engineer,Engineering,ravi.sharma@example.com,Rejected,LinkedIn,2026-09-29,1
-1015,Emma Johansson,Recruiter,People,emma.johansson@example.com,Applied,Career site,2026-10-20,
+_id,name,session_id,specification_id,ps1,ps2,test_name,test_start,test_complete_time
+r001,Maya Patel,SES-2026-01,SPEC-A12,72.5,88.10,Numerical Reasoning,2026-10-02 09:00,2026-10-02 09:32
+r002,Liam O'Connor,SES-2026-01,SPEC-A12,65.0,79.35,Numerical Reasoning,2026-10-02 09:40,2026-10-02 10:15
+r003,Sofia Rossi,SES-2026-01,SPEC-B07,91.25,94.00,Technical Coding,2026-10-02 10:30,2026-10-02 11:45
+r004,Ethan Brooks,SES-2026-02,SPEC-B07,48.75,62.40,Situational Judgement,2026-10-05 13:00,2026-10-05 13:28
+r005,Aisha Mohammed,SES-2026-02,SPEC-A12,80.00,76.85,Numerical Reasoning,2026-10-05 13:45,2026-10-05 14:17
+r006,Noah Kim,SES-2026-02,SPEC-C03,55.5,60.10,Technical Coding,2026-10-06 09:15,2026-10-06 10:40
+r007,Chloe Martin,SES-2026-03,SPEC-C03,88.0,91.70,Situational Judgement,2026-10-08 11:00,2026-10-08 11:26
+r008,Lucas Silva,SES-2026-03,SPEC-A12,70.25,68.90,Numerical Reasoning,2026-10-08 11:40,2026-10-08 12:12
+r009,Hannah Lee,SES-2026-03,SPEC-B07,83.6,85.20,Situational Judgement,2026-10-09 15:00,2026-10-09 15:25
+r010,Omar Hassan,SES-2026-04,SPEC-C03,59.9,72.45,Technical Coding,2026-10-12 08:30,2026-10-12 09:55
+r011,Grace Nguyen,SES-2026-04,SPEC-A12,94.5,97.00,Numerical Reasoning,2026-10-12 10:10,2026-10-12 10:41
+r012,Mateo Garcia,SES-2026-04,SPEC-B07,77.15,80.30,Technical Coding,2026-10-13 14:00,2026-10-13 15:20
+r013,Zoe Williams,SES-2026-05,SPEC-C03,68.4,71.05,Situational Judgement,2026-10-15 09:00,2026-10-15 09:24
+r014,Ravi Sharma,SES-2026-05,SPEC-A12,42.0,50.75,Numerical Reasoning,2026-10-15 09:35,2026-10-15 10:10
+r015,Emma Johansson,SES-2026-05,SPEC-B07,85.9,89.60,Technical Coding,2026-10-16 11:00,2026-10-16 12:30

@@ -34,6 +34,26 @@ export default function Sidebar({ active, onSelect }: SidebarProps) {
           Records (CSV)
         </button>
       </nav>
+
+      <div className="sidebar-title sidebar-section">Station</div>
+      <nav className="sidebar-nav">
+        <button
+          type="button"
+          className={`sidebar-item${active === 'station-overview' ? ' active' : ''}`}
+          aria-current={active === 'station-overview' ? 'page' : undefined}
+          onClick={() => onSelect('station-overview')}
+        >
+          Overview
+        </button>
+        <button
+          type="button"
+          className={`sidebar-item${active === 'station-panel' ? ' active' : ''}`}
+          aria-current={active === 'station-panel' ? 'page' : undefined}
+          onClick={() => onSelect('station-panel')}
+        >
+          Station panel
+        </button>
+      </nav>
     </aside>
   )
 }

@@ -3,24 +3,45 @@ import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 import ReportPanel from './components/ReportPanel'
 import RecordsPanel from './components/RecordsPanel'
+import StationOverview from './components/StationOverview'
+import StationPanel from './components/StationPanel'
 import { type View } from './data/reports'
+import { stations } from './data/stations'
 import './App.css'
 
 function App() {
   const [activeView, setActiveView] = useState<View>('overview')
+  const [selectedStationId, setSelectedStationId] = useState(stations[0].id)
+
+  function openStation(id: string) {
+    setSelectedStationId(id)
+    setActiveView('station-panel')
+  }
+
+  function renderMain() {
+    switch (activeView) {
+      case 'records':
+        return <RecordsPanel />
+      case 'station-overview':
+        return <StationOverview onOpenStation={openStation} />
+      case 'station-panel':
+        return (
+          <StationPanel
+            stationId={selectedStationId}
+            onSelectStation={setSelectedStationId}
+          />
+        )
+      default:
+        return <ReportPanel report={activeView} />
+    }
+  }
 
   return (
     <div className="app">
       <Header />
       <div className="layout">
         <Sidebar active={activeView} onSelect={setActiveView} />
-        <main className="main">
-          {activeView === 'records' ? (
-            <RecordsPanel />
-          ) : (
-            <ReportPanel report={activeView} />
-          )}
-        </main>
+        <main className="main">{renderMain()}</main>
       </div>
     </div>
   )
