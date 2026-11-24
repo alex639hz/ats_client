@@ -1,0 +1,16 @@
+id,name,role,department,email,stage,source,applied_on,rating
+1001,Maya Patel,Frontend Engineer,Engineering,maya.patel@example.com,Interviewing,LinkedIn,2026-10-02,4
+1002,Liam O'Connor,Product Designer,Design,liam.oconnor@example.com,Screening,Referral,2026-10-03,3
+1003,Sofia Rossi,"Senior Engineer, Backend",Engineering,sofia.rossi@example.com,Offer,Referral,2026-09-18,5
+1004,Ethan Brooks,Account Executive,Sales,ethan.brooks@example.com,Applied,Job board,2026-10-07,2
+1005,Aisha Mohammed,Data Analyst,Analytics,aisha.mohammed@example.com,Interviewing,LinkedIn,2026-10-09,4
+1006,Noah Kim,Frontend Engineer,Engineering,noah.kim@example.com,Rejected,Career site,2026-09-25,2
+1007,Chloe Martin,Recruiter,People,chloe.martin@example.com,Hired,Referral,2026-08-30,5
+1008,Lucas Silva,"Marketing Manager, EMEA",Marketing,lucas.silva@example.com,Screening,Job board,2026-10-11,3
+1009,Hannah Lee,Product Designer,Design,hannah.lee@example.com,Interviewing,LinkedIn,2026-10-04,4
+1010,Omar Hassan,Senior Engineer,Engineering,omar.hassan@example.com,Applied,Career site,2026-10-14,
+1011,Grace Nguyen,Data Analyst,Analytics,grace.nguyen@example.com,Offer,LinkedIn,2026-09-12,4
+1012,Mateo Garcia,Account Executive,Sales,mateo.garcia@example.com,Hired,Job board,2026-08-21,4
+1013,Zoe Williams,"Customer Success Lead",Support,zoe.williams@example.com,Screening,Referral,2026-10-16,3
+1014,Ravi Sharma,Backend Engineer,Engineering,ravi.sharma@example.com,Rejected,LinkedIn,2026-09-29,1
+1015,Emma Johansson,Recruiter,People,emma.johansson@example.com,Applied,Career site,2026-10-20,

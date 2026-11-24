@@ -1,5 +1,8 @@
 export type ReportKey = 'overview' | 'candidates' | 'jobs' | 'pipeline'
 
+// Everything the main panel can show: a report, or the CSV records view.
+export type View = ReportKey | 'records'
+
 export interface Stat {
   label: string
   value: string

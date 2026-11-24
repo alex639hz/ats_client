@@ -1,8 +1,8 @@
-import { reports, type ReportKey } from '../data/reports'
+import { reports, type View } from '../data/reports'
 
 interface SidebarProps {
-  active: ReportKey
-  onSelect: (key: ReportKey) => void
+  active: View
+  onSelect: (view: View) => void
 }
 
 export default function Sidebar({ active, onSelect }: SidebarProps) {
@@ -21,6 +21,18 @@ export default function Sidebar({ active, onSelect }: SidebarProps) {
             {report.label}
           </button>
         ))}
+      </nav>
+
+      <div className="sidebar-title sidebar-section">Data</div>
+      <nav className="sidebar-nav">
+        <button
+          type="button"
+          className={`sidebar-item${active === 'records' ? ' active' : ''}`}
+          aria-current={active === 'records' ? 'page' : undefined}
+          onClick={() => onSelect('records')}
+        >
+          Records (CSV)
+        </button>
       </nav>
     </aside>
   )
