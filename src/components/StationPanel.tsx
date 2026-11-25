@@ -1,3 +1,5 @@
+import { useState } from 'react'
+import { sendFrameworkCommand, type FrameworkAction } from '../data/framework'
 import { stations, type StationStatus } from '../data/stations'
 
 interface StationPanelProps {
@@ -13,6 +15,22 @@ const statusLabel: Record<StationStatus, string> = {
 
 export default function StationPanel({ stationId, onSelectStation }: StationPanelProps) {
   const station = stations.find((s) => s.id === stationId) ?? stations[0]
+  const [pending, setPending] = useState<FrameworkAction | null>(null)
+  const [message, setMessage] = useState<{ ok: boolean; text: string } | null>(null)
+
+  async function runCommand(action: FrameworkAction) {
+    setPending(action)
+    setMessage(null)
+    try {
+      await sendFrameworkCommand(action, 'dut_test')
+      setMessage({ ok: true, text: action === 'start' ? 'Test started.' : 'Test stopped.' })
+    } catch (err) {
+      const text = err instanceof Error ? err.message : String(err)
+      setMessage({ ok: false, text: `Failed to ${action} test: ${text}` })
+    } finally {
+      setPending(null)
+    }
+  }
 
   return (
     <div>
@@ -37,7 +55,25 @@ export default function StationPanel({ stationId, onSelectStation }: StationPane
             </option>
           ))}
         </select>
+        <button
+          type="button"
+          className="btn btn-primary"
+          disabled={pending !== null}
+          onClick={() => void runCommand('start')}
+        >
+          {pending === 'start' ? 'Starting…' : 'Start'}
+        </button>
+        <button
+          type="button"
+          className="btn btn-danger"
+          disabled={pending !== null}
+          onClick={() => void runCommand('stop')}
+        >
+          {pending === 'stop' ? 'Stopping…' : 'Stop'}
+        </button>
       </div>
+
+      {message && <p className={message.ok ? 'success' : 'error'}>{message.text}</p>}
 
       <div className="stats">
         <div className="stat-card">

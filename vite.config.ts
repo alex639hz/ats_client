@@ -14,7 +14,21 @@ function apiPlugin(): Plugin {
   }
 }
 
+// Test framework API (start/stop tests). Override with FRAMEWORK_URL, e.g.
+//   FRAMEWORK_URL=http://127.0.0.1:8000
+const FRAMEWORK_URL = process.env.FRAMEWORK_URL ?? 'http://127.0.0.1:8088'
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), apiPlugin()],
+  server: {
+    proxy: {
+      // /framework/start/dut_test -> FRAMEWORK_URL/start/dut_test
+      '/framework': {
+        target: FRAMEWORK_URL,
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/framework/, ''),
+      },
+    },
+  },
 })
